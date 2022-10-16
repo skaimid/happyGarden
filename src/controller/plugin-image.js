@@ -1,9 +1,10 @@
 "use strict"
 const { segment } = require("oicq")
-const { bot } = require("./index")
+const { bot } = require("../index")
 
 // 回复图片
 bot.on("message", function (msg) {
+	console.log(JSON.stringify(msg))
 	if (msg.raw_message === "image")
 		msg.reply(segment.image("https://sqimg.qq.com/qq_product_operations/im/qqlogo/imlogo.png"))
 })
