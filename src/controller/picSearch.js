@@ -8,12 +8,10 @@ const admin = parseInt(process.env.ADMIN);
 
 bot.on("message", (msg) => {
   if (
-    groupWhiteList &&
-    groupWhiteList.find(
-      (item) => item === msg.group_id || msg.from_id === admin
-    )
+    (groupWhiteList && groupWhiteList.find((item) => item === msg.group_id)) ||
+    msg.from_id === admin
   ) {
-    console.log(groupWhiteList,admin);
+    console.log(groupWhiteList, admin);
     if (msg.raw_message && msg.raw_message.startsWith("搜图")) {
       const imgMsgEl = msg.message.find((item) => item.type === "image");
       if (imgMsgEl && imgMsgEl.url) {

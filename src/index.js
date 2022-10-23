@@ -26,6 +26,8 @@ exports.bot = bot
 
 require('./controller/picSearch');
 require('./controller/randomPic');
+require('./controller/nsfw');
+require('./controller/yande.re');
 
 process.on("unhandledRejection", (reason, promise) => {
 	console.log('Unhandled Rejection at:', promise, 'reason:', reason);

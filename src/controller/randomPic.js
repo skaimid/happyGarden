@@ -14,7 +14,7 @@ const keyWordsMap = [
     ch: "ArkPics",
   },
   {
-    keywords: ["原", "原神"],
+    keywords: ["原", "原神", "烧鸡"],
     ch: "GenShinPicBed",
   },
   {
